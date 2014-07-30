@@ -5,4 +5,4 @@ Feature:
 
   Scenario: veo la pantalla de bienvenida
     Given ingreso al juego
-    Then veo el mensaje "Bienvenido al ahorcado"
+    Then veo el mensaje "Hola Mundo"
