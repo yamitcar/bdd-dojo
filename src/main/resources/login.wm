@@ -1,0 +1,7 @@
+<html>
+	<head></head>
+	<body>
+			<h1 id="saludo">${saludo}</h1>
+			
+	</body>
+</html>
