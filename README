@@ -4,3 +4,8 @@ config with Junit and Cucumber-JVM
 
 to run the test:
     mvn test
+
+
+gradle migration in course
+
+∫
