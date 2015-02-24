@@ -5,4 +5,4 @@ Feature:
 
   Scenario: veo la pantalla de bienvenida
     Given ingreso al juego
-    Then veo el mensaje "Hola Mundo"
+    Then veo el mensaje "Hola Mundo!"

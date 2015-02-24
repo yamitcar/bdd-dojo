@@ -1,11 +1,37 @@
 apply plugin: 'java'
-apply plugin: 'jetty'
+apply plugin: 'jacoco'
+
+
+defaultTasks 'clean','test', 'jacocoTestReport'
+
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
 }
+
+task startApp() << {
+    ant.java(classname : 'edu.Spark',
+            fork:false,
+            classpath : "${sourceSets.main.runtimeClasspath.asPath}")
+}
+
+jacocoTestReport {
+    group = "reporting"
+    description = "Generate Jacoco coverage reports after running tests."
+    reports {
+        xml.enabled true
+        html.enabled true
+        csv.enabled false
+    }
+    //classDirectories = fileTree(dir: 'build/classes/main', include: 'com/thc/**')
+    //sourceDirectories = fileTree(dir: 'scr/java', include: 'com/thc/**')
+    additionalSourceDirs = files(sourceSets.main.allJava.srcDirs)
+}
+
+test.dependsOn startApp
+
 
 dependencies {
   testCompile 'info.cukes:cucumber-java:1.1.5'
@@ -20,3 +46,4 @@ dependencies {
   compile 'com.sparkjava:spark-template-velocity:2.0.0'
 
 }
+

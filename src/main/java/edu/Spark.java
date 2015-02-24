@@ -19,9 +19,7 @@ public class Spark {
 //        }, new VelocityTemplateEngine());
 
 
-        get("/",(request, response) -> {
-            return "<h1 id=\"welcome\">Hola Mundo</h1>";
-        });
+        get("/",(request, response) -> "<h1 id=\"welcome\">Hola Mundo!</h1>");
 
     }
 
