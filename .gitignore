@@ -2,9 +2,10 @@
 *.ipr
 *.iws
 target/
-.idea
+.idea/
 .classpath
 .project
 .settings/
 build/
 .gradle/
+gradle/
