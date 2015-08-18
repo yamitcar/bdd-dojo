@@ -11,7 +11,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        format = {"pretty","html:target/cucumber"},
-        features = "src/test/resources"
-)
+
+        features = "src/test/resources/features",
+        format = { "pretty","html: cucumber-html-reports",
+                "json: cucumber-html-reports/cucumber.json" },
+        dryRun = false,
+        glue = "edu" )
 public class BDDRunnerTest {}
