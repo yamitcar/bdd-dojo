@@ -6,7 +6,8 @@ First you need to config the Chrome Driver
 
     download it from: https://sites.google.com/a/chromium.org/chromedriver/downloads
 
-and set the path with in the class "SmokeSteps"
+
+and set the path in file `/src/test/java/edu/SmokeSteps.java#L17` with:
 
     System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
 
