@@ -6,4 +6,4 @@ Característica: iniciar app
 
   Escenario: veo la pantalla de bienvenida
     Dado ingreso al juego
-    Entonces veo el mensaje "Hola Mundo"
+    Entonces veo el mensaje "Hola Harry"

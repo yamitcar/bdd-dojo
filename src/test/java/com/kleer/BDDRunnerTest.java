@@ -1,4 +1,4 @@
-package edu;
+package com.kleer;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -16,5 +16,5 @@ import org.junit.runner.RunWith;
         format = { "pretty","html: cucumber-html-reports",
                 "json: cucumber-html-reports/cucumber.json" },
         dryRun = false,
-        glue = "edu" )
+        glue = "com.kleer" )
 public class BDDRunnerTest {}

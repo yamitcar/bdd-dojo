@@ -1,4 +1,4 @@
-package edu;
+package com.kleer;
 
 
 import com.codeborne.selenide.Selenide;
