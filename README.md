@@ -1,34 +1,56 @@
-#Project Base for TDD and ATDD with java
+To try and encourage more sales of the 5 different Harry
+Potter books they sell, a Flourish y Blotts has decided to offer 
+discounts of multiple-book purchases. 
 
-It use Spark microframework, Cucumber, Junit, HtmlUnit and Selenide.
+    One copy of any of the five books costs 8 EUR. 
 
-This Project was configured with a headless browser using HtmlUnitDriver (Selenium)
+    If, however, you buy two different books, you get a 5% 
+discount on those two books.
 
-###If you want to config this to run with Google Chrome you need to follow the next instructions:
+    If you buy 3 different books, you get a 10% discount. 
 
-First you need to config the Chrome Driver
+    If you buy 4 different books, you get a 20% discount.
 
-    download it from: https://sites.google.com/a/chromium.org/chromedriver/downloads
+    If you go the whole hog, and buy all 5, you get a huge 25%
+discount. 
 
+Note that if you buy, say, four books, of which 3 are 
+different titles, you get a 10% discount on the 3 that 
+form part of a set, but the fourth book still costs 8 EUR. 
 
-In  file `/src/test/java/edu/SmokeSteps.java` enable this lines:
-    
-    System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
-    driver = new ChromeDriver();
+Your mission is to write a piece of code to calculate the 
+price of any conceivable shopping basket (containing only 
+Harry Potter books), giving as big a discount as possible.
 
-and remove this lines:
+For example, how much does this basket of books cost?
 
-    driver = new HtmlUnitDriver();
-    ((HtmlUnitDriver)driver).setJavascriptEnabled(true);
+2 copies of the first book
+2 copies of the second book
+2 copies of the third book
+1 copy of the fourth book
+1 copy of the fifth book
 
+One way of group these 8 books is:
+ 1 group of 5 --> 25% discount (1st,2nd,3rd,4th,5th)
++1 group of 3 --> 10% discount (1st,2nd,3rd)
+This would give a total of
+ 5 books at a 25% discount
++3 books at a 10% discount
+Giving
+ 5 x (8 - 2.00) == 5 x 6.00 == 30.00
++3 x (8 - 0.80) == 3 x 7.20 == 21.60
+For a total of 51.60
 
-##config with Junit and Cucumber-JVM
+However, a different way to group these 8 books is:
+ 1 group of 4 books --> 20% discount  (1st,2nd,3rd,4th)
++1 group of 4 books --> 20% discount  (1st,2nd,3rd,5th)
+This would give a total of
+ 4 books at a 20% discount
++4 books at a 20% discount
+Giving
+ 4 x (8-1.60) == 4 x 6.40 == 25.60
++4 x (8-1.60) == 4 x 6.40 == 25.60
+For a total of 51.20
 
-to run the test:
-
-    gradle clean test --info
-
-to generate coverage report:
-
-    gradle clean test jacocoTestReport --info
+And 51.20 is the price with the biggest discount.
 

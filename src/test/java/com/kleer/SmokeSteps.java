@@ -31,7 +31,7 @@ public class SmokeSteps {
         WebDriverRunner.setWebDriver(driver);
     }
 
-    @Dado("^ingreso al juego$")
+    @Dado("^ingreso a la libreria$")
     public void ingreso_al_juego() throws Throwable {
         Selenide.open("http://localhost:4567/");
     }
