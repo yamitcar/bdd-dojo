@@ -5,7 +5,6 @@
         <div style="text-align: center;">
             <h1 id="welcome">${welcome}</h1>
 
-    
             <br>
             <form action="/comprar" method="post">
                 Harry potter y la piedra filosofal
@@ -14,6 +13,19 @@
                 <br>
                 Harry potter y la camara secreta
                 <input type="text" id="La camara secreta" name="libro2">
+
+                <br>
+                Harry potter y el prisionero de askaban
+                <input type="text" id="El prisionero de askaban" name="libro3">
+
+                <br>
+                Harry potter y el caliz de fuego
+                <input type="text" id="El caliz de fuego" name="libro4">
+
+                <br>
+                Harry potter y la orden del fenix
+                <input type="text" id="La orden del fenix" name="libro5">
+
 
                 <br>
                 <input type="submit" id="comprar" value="comprar"/>
