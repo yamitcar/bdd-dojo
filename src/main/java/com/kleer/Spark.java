@@ -1,9 +1,13 @@
 package com.kleer;
 
+import com.kleer.model.CalculadoraDePrecios;
+import com.kleer.model.Libro;
+import com.kleer.util.UtilPotter;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static spark.Spark.get;
@@ -21,16 +25,12 @@ public class Spark {
 
         post("/comprar", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            
-            int libro1 = Integer.parseInt(request.queryParams("libro1"));
 
-            int libro2= 0;
-            
-            if(!request.queryParams("libro2").equals("")) {
-                libro2 = Integer.parseInt(request.queryParams("libro2"));
-            }
-            
-            int total = (libro1+libro2)*8;
+            CalculadoraDePrecios calculadoraDePrecios = new CalculadoraDePrecios();
+
+            List<Libro> libros = UtilPotter.convertToLibros(request);
+
+            int total = calculadoraDePrecios.calcular(libros);
             
             model.put("total", total+" USD");
             return new ModelAndView(model, "comprar.wm");
