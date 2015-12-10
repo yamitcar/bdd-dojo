@@ -1,0 +1,11 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div style="text-align: center;">
+
+            <h2 id="total">Total de su compra: ${total}</h2>
+        </div>
+
+    </body>
+</html>

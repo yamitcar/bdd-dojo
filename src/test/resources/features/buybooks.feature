@@ -6,5 +6,6 @@ Característica: Comprar libros sin descuentos
 
   Escenario: comprar 1 libro
     Dado ingreso a la libreria
-    Cuando compro un libro
-    Entonces veo el mensaje "Bienvenido a Flourish y Blotts"
+    Cuando selecciono 1 libro de "La piedra filosofal"
+    Y compro mi seleccion de libros
+    Entonces veo "Total de su compra: 8 USD"

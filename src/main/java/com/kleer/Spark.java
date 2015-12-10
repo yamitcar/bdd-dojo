@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static spark.Spark.get;
+import static spark.Spark.post;
 
 public class Spark {
 
@@ -18,6 +19,14 @@ public class Spark {
             return new ModelAndView(model, "index.wm");
         }, new VelocityTemplateEngine());
 
+        post("/comprar", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            model.put("total", "8 USD");
+            return new ModelAndView(model, "comprar.wm");
+        }, new VelocityTemplateEngine());
+
     }
+
+    
 
 }

@@ -2,6 +2,19 @@
     <head>
     </head>
     <body>
-        <center><h1 id="welcome">${welcome}</h1></center>
+        <div style="text-align: center;">
+            <h1 id="welcome">${welcome}</h1>
+
+    
+            <br>
+            <form action="/comprar" method="post">
+                Harry potter y la piedra filosofal
+                <input type="text" id="La piedra filosofal">
+
+                <br>
+                <input type="submit" id="comprar" value="comprar"/>
+            </form>
+        </div>
+
     </body>
 </html>
