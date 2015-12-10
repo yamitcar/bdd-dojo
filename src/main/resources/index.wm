@@ -9,7 +9,11 @@
             <br>
             <form action="/comprar" method="post">
                 Harry potter y la piedra filosofal
-                <input type="text" id="La piedra filosofal">
+                <input type="text" id="La piedra filosofal"  name="libro1">
+                
+                <br>
+                Harry potter y la camara secreta
+                <input type="text" id="La camara secreta" name="libro2">
 
                 <br>
                 <input type="submit" id="comprar" value="comprar"/>

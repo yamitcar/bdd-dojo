@@ -21,7 +21,18 @@ public class Spark {
 
         post("/comprar", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            model.put("total", "8 USD");
+            
+            int libro1 = Integer.parseInt(request.queryParams("libro1"));
+
+            int libro2= 0;
+            
+            if(!request.queryParams("libro2").equals("")) {
+                libro2 = Integer.parseInt(request.queryParams("libro2"));
+            }
+            
+            int total = (libro1+libro2)*8;
+            
+            model.put("total", total+" USD");
             return new ModelAndView(model, "comprar.wm");
         }, new VelocityTemplateEngine());
 
