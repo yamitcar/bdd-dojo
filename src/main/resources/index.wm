@@ -1,2 +1,7 @@
-<h1 id="welcome">${welcome}</h1>
-
+<html>
+    <head>
+    </head>
+    <body>
+        <center><h1 id="welcome">${welcome}</h1></center>
+    </body>
+</html>
