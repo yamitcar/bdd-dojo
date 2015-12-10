@@ -5,7 +5,7 @@ discounts of multiple-book purchases.
     One copy of any of the five books costs 8 EUR. 
 
     If, however, you buy two different books, you get a 5% 
-discount on those two books.
+    discount on those two books.
 
     If you buy 3 different books, you get a 10% discount. 
 
