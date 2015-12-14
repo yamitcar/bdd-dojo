@@ -33,5 +33,5 @@ COPY target/bdd-dojo-1.0.0-jar-with-dependencies.jar .
 ENTRYPOINT ["java", "-jar", "bdd-dojo-1.0.0-jar-with-dependencies.jar"]
 
 #build y ejecucion
-#docker build -t harryPotter
-#docker run -t -p 4567:4567 harryPotter
+#docker build -t harry-potter .
+#docker run -t -p 4567:4567 harry-potter
