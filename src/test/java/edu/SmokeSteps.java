@@ -3,8 +3,8 @@ package edu;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import cucumber.api.java.After;
-import cucumber.api.java.es.Dado;
-import cucumber.api.java.es.Entonces;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
@@ -28,12 +28,12 @@ public class SmokeSteps {
         WebDriverRunner.setWebDriver(driver);
     }
 
-    @Dado("^ingreso al juego$")
+    @Given("^open the game$")
     public void ingreso_al_juego() throws Throwable {
         Selenide.open("http://localhost:4567/");
     }
 
-    @Entonces("^veo el mensaje \"([^\"]*)\"$")
+    @Then("^i want to see \"([^\"]*)\"$")
     public void veo_el_mensaje(String message) throws Throwable {
         $(By.id("welcome")).shouldHave(text(message));
     }

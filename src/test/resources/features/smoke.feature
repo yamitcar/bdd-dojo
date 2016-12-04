@@ -1,9 +1,8 @@
-#language: es
-Característica: iniciar app
-  Como jugador
-  quiero que el juego me de la bienvenidad
-  para engancharme al juego
+Feature: start app
+  As a player
+  I want that the game show a welcome message
+  To know it is the game that i want to play
 
-  Escenario: veo la pantalla de bienvenida
-    Dado ingreso al juego
-    Entonces veo el mensaje "Hola Mundo"
+  Scenario: See welcome screen
+    When open the game
+    Then i want to see "Hola Mundo"
