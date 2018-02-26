@@ -7,7 +7,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -19,12 +19,13 @@ public class SmokeSteps {
 
     {   
         //Config for a ChromeDriver
-        //System.setProperty("webdriver.chrome.driver", "/Users/yamitcardenas/desarrollo/tools/chromedriver");
-        //driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "/Users/yamitcardenas/desarrollo/tools/chromedriver");
+        driver = new ChromeDriver();
         
         //config for a headless browser with HtmlUnit
-        driver = new HtmlUnitDriver();
-        ((HtmlUnitDriver)driver).setJavascriptEnabled(true);
+
+        //driver = new HtmlUnitDriver();
+        //((HtmlUnitDriver)driver).setJavascriptEnabled(true);
         WebDriverRunner.setWebDriver(driver);
     }
 
